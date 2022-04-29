@@ -2,7 +2,8 @@ const app = new Vue({
     el: '#app',
 
     data:{
-        user: ''
+        //user: '',
+        data: null,
     },
 
     methods:{},
@@ -10,7 +11,7 @@ const app = new Vue({
     mounted(){
         axios.get('https://flynn.boolean.careers/exercises/api/random/mail').then(response =>{
         console.log(response.data);
-        this.user = response.data.response
+        this.data = response.data
         })
     }
 })
