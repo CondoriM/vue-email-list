@@ -3,15 +3,16 @@ const app = new Vue({
 
     data:{
         //user: '',
-        data: null,
+        mail: [],
     },
 
     methods:{},
 
     mounted(){
         axios.get('https://flynn.boolean.careers/exercises/api/random/mail').then(response =>{
-        console.log(response.data);
-        this.data = response.data
+            for(let i = 0;i < 10;i++){
+                this.mail.push(response.data.response)
+            }
         })
     }
 })

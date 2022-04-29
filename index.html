@@ -11,17 +11,8 @@
 <body>
     <div id="app">
         <h1>Hello World</h1>
-        <ul>
-            <li>{{data.response}}</li>
-            <li>{{data.response}}</li>
-            <li>{{data.response}}</li>
-            <li>{{data.response}}</li>
-            <li>{{data.response}}</li>
-            <li>{{data.response}}</li>
-            <li>{{data.response}}</li>
-            <li>{{data.response}}</li>
-            <li>{{data.response}}</li>
-            <li>{{data.response}}</li>
+        <ul v-if="mail.length == 10">
+            <li v-for="(user,index) in mail">{{user}}</li>
         </ul>
     </div>
 
